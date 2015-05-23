@@ -1,0 +1,32 @@
+// PFUDOR.tk Stylesheet -- Main
+
+body {
+    margin: 0;
+    border: none;
+    background: $solidpink;
+    color: $halfwhite;
+}
+
+* {
+    overflow: hidden;
+    font-family: $ff;
+}
+
+a:link,
+a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover,
+a:active {
+    color: $solidpink;
+}
+
+#player {
+    width: 100%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 0;
+}
