@@ -2,3 +2,4 @@
 node_modules
 .cache
 *.min.*
+npm-debug.log
