@@ -18,6 +18,9 @@ function onYouTubeIframeAPIReady() {
             'autoplay': 1,
             'start': start,
             'end': end
+        },
+        events: {
+            'onReady': onPlayerReady
         }
     });
 }
@@ -31,6 +34,10 @@ function vid_play(){
 
 function vid_pause(){
     player.pauseVideo();
+}
+
+function onPlayerReady() {
+    $('#loading').remove();
 }
 
 // Apply filters

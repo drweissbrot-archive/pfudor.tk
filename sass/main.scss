@@ -30,3 +30,16 @@ a:active {
     margin-right: auto;
     z-index: 0;
 }
+
+#loading {
+    padding-top: 100px;
+    font-size: 250%;
+    text-align: center;
+    z-index: 1;
+    line-height: 1.2em;
+    color: white;
+    background-color: rgba(0,0,0,0);
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
