@@ -44,3 +44,23 @@ function onPlayerReady() {
 $(function() {
     $('#player').css({'-webkit-filter':'blur(' + blur + 'px) grayscale(' + gray + '%) sepia(' + sepia + '%)'});
 });
+
+// Hide cursor if idle
+$(function() {
+    var mouse_idle_timer;
+    $("body").css({'cursor':'none'});
+    $("body").mousemove(function() {
+            $("body").css({'cursor':''});
+            clearTimeout(mouse_idle_timer);
+
+            mouse_idle_timer = setTimeout(function() {
+                $("body").css('cursor', 'none');
+
+                var mouse_force_hide = true;
+                setTimeout(function() {
+                    mouse_force_hide = false;
+                }, 200);
+            }, 1000);
+        }
+    );
+});
