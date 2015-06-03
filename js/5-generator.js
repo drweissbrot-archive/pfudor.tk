@@ -6,9 +6,9 @@ function gen_enablepfudor() {
     $('#1080').attr("disabled","disabled");
     $('#startat').attr("disabled","disabled");
     $('#stopat').attr("disabled","disabled");
-    $("vidid").value="";
-    $("startat").value="";
-    $("stopat").value="";
+    $("vidid").value = "";
+    $("startat").value = "";
+    $("stopat").value = "";
     $('#vididgroup').attr("style","display: none");
 }
 function gen_disablepfudor() {
