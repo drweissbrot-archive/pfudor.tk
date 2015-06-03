@@ -102,22 +102,7 @@ if(blur == undefined) {
 $(document).ready(function(){
     console.log("Everything is set.");
     warn_beta();
-    resize();
 });
-
-window.onresize=function(){
-    resize();
-}
-
-function resize() {
-    vportheight=$(window).height();
-    $('#player').css({'height':vportheight+'px'});
-    if(ctrls != 1) {
-        $('#overlay').css({'height':vportheight+'px'});
-    }
-    $('#modal').css({'height':vportheight+'px'});
-    console.log("Resized player, overlay, and modals.");
-}
 
 function warn_beta() {
     alert('You\'re looking at our all new JavaScript-based version of PFUDOR.tk. It\'s still a beta, so we apologize for any inconvenience in advance.');
