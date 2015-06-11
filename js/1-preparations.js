@@ -25,7 +25,7 @@ var blur    = $.querystring('blur');
 // Set defaults
 // Determine which video to play
 var ytplay; var pfudor;
-if(vidid == 'anim' || vidid === undefined || vidid === "" || vidid == 'qRC4Vk6kisY') {
+if(vidid == 'anim' || vidid === undefined || vidid == null || vidid == 'qRC4Vk6kisY') {
     ytplay = false;
     pfudor = 'anim';
     vidid  = 'qRC4Vk6kisY';
