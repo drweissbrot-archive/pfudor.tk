@@ -9,7 +9,13 @@ $(function(){
         } else {
             $('#credits').append('<a href="//pfudor.tk?v=anim">Switch to the animated video</a>');
         }
-    } else {
+    }
+
+    if(pfudor !== 'gaben') {
+        $('#credits').append('<a href="//pfudor.tk?v=gaben">Praise Lord Gaben!</a><br />');
+    }
+
+    if(pfudor === false || pfudor == 'gaben') {
         $('#credits').append('<a href="//youtube.com/watch?v=' + vidid + '">Switch to the video</a>');
     }
 });

@@ -33,6 +33,10 @@ if(vidid == 'anim' || vidid === undefined || vidid == null || vidid == 'qRC4Vk6k
     ytplay = false;
     pfudor = 'huang';
     vidid  = 'eWM2joNb9NE';
+} else if(vidid == 'gaben' || vidid == 'rP2MDtWu5t0') {
+    ytplay = false;
+    pfudor = 'gaben';
+    vidid  = 'rP2MDtWu5t0';
 } else {
     ytplay = true;
     pfudor = false;
