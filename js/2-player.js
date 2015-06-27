@@ -20,7 +20,8 @@ function onYouTubeIframeAPIReady() {
             'end': end
         },
         events: {
-            'onReady': onPlayerReady
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
         }
     });
 }
@@ -64,3 +65,18 @@ $(function() {
         }
     );
 });
+
+// Enable looping on non-PFUDOR videos
+function onPlayerStateChange() {
+    if(start !== null) {
+        player.seekTo(start);
+
+        if(end !== null) {
+            var playtime = (end - start) * 1000;
+
+            setTimeout(function() {
+                player.seekTo(start);
+            }, playtime);
+        }
+    }
+}

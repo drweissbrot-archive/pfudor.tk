@@ -25,7 +25,7 @@ var blur    = $.querystring('blur');
 // Set defaults
 // Determine which video to play
 var ytplay; var pfudor;
-if(vidid == 'anim' || vidid === undefined || vidid == null || vidid == 'qRC4Vk6kisY') {
+if(vidid == 'anim' || vidid === undefined || vidid === null || vidid == 'qRC4Vk6kisY') {
     ytplay = false;
     pfudor = 'anim';
     vidid  = 'qRC4Vk6kisY';
@@ -68,9 +68,9 @@ if(volume === 0) {
 }
 
 // Parse quality param
-if(quality !== undefined) {
+/* if(quality !== undefined) {
     console.log('YouTube\'s iframe Player does not support the video quality to be set by the app developer. So, this function is not available anymore.');
-}
+} */
 
 // Get control status
 if(ctrls == "1" || ctrls == "true") {
@@ -96,9 +96,9 @@ if(blur === undefined) {
 // Further preparations
 $(document).ready(function(){
     console.log("Everything is set.");
-    warn_beta();
+    // warn_beta();
 });
 
-function warn_beta() {
+/*function warn_beta() {
     alert('You\'re looking at our all new JavaScript-based version of PFUDOR.tk. It\'s still a beta, so we apologize for any inconvenience in advance.');
-}
+}*/
