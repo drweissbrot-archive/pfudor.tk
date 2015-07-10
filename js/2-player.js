@@ -49,13 +49,13 @@ $(function() {
 // Hide cursor if idle
 $(function() {
     var mouse_idle_timer;
-    $("body").css({'cursor':'none'});
+    $('body').removeClass('idle');
     $("body").mousemove(function() {
-            $("body").css({'cursor':''});
+            $("body").removeClass('idle');
             clearTimeout(mouse_idle_timer);
 
             mouse_idle_timer = setTimeout(function() {
-                $("body").css('cursor', 'none');
+                $("body").addClass('idle');
 
                 var mouse_force_hide = true;
                 setTimeout(function() {

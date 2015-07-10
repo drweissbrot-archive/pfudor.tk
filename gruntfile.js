@@ -3,11 +3,11 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
         watch: {
             sass: {
-                files: ['sass/*.scss'],
-                tasks: ['sass', 'cssmin']
+                files: ['sass/**/*.scss'],
+                tasks: ['sass']
             },
             uglify: {
-                files: ['js/*.js'],
+                files: ['js/**/*.js'],
                 tasks: ['uglify']
             }
         },
@@ -17,28 +17,32 @@ module.exports = function(grunt) {
             },
             my_target: {
                 files: {
-                    'www/pfudortk.min.js': ['js/*.js']
+                    'www/assets/pfudortk.min.js': ['js/*.js']
                 }
             }
         },
         sass: {
             dist: {
                 options: {
-                    style: 'expanded'
+                    style: 'expanded',
+                    cacheLocation: '.cache/sass'
                 },
-                files: {
-                    '.cache/css/pfudortk.css': 'sass/map.scss',
-                    '.cache/css/gen.css': 'sass/gen.scss'
-                }
+                files: [{
+                    expand: true,
+                    cwd: 'sass',
+                    src: ['*.scss'],
+                    dest: 'www/assets/',
+                    ext: '.css'
+                }]
             }
         },
         cssmin: {
             my_target: {
                 files: [{
                     expand: true,
-                    cwd: '.cache/css/',
+                    cwd: 'www/assets/',
                     src: ['*.css', '!*.min.css'],
-                    dest: 'www/',
+                    dest: 'www/assets/',
                     ext: '.min.css'
                 }]
             }

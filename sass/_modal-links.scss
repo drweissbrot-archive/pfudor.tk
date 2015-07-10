@@ -1,0 +1,15 @@
+#modal-links {
+    @include transition;
+    opacity: 1;
+
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    z-index: 4;
+
+    text-align: right;
+
+    a {
+        cursor: pointer;
+    }
+}

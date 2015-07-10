@@ -1,0 +1,55 @@
+.modal {
+    @include transition;
+    opacity: 0;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+
+    background: rgba(white, 0.5);
+
+    padding: 20px 40px;
+
+    h1 small {
+        @include transition;
+        font-weight: normal;
+        cursor: pointer;
+
+        &:hover {
+            @include transition;
+            color: $pink;
+        }
+    }
+
+
+    @media screen and (min-width: 998px) {
+        .left-half {
+            float: left;
+            width: 50%;
+        }
+
+        .right-half {
+            float: right;
+            width: 50%;
+        }
+    }
+
+    &.active {
+        @include transition;
+        opacity: 1;
+        z-index: 6;
+    }
+
+    &#modal-generator {
+        input {
+            color: black;
+        }
+
+        div {
+            margin-bottom: 25px;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+#credits {
+    @include transition;
+    position: absolute;
+    top: 20px;
+    left: 40px;
+
+    z-index: 3;
+}
