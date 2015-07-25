@@ -92,13 +92,18 @@ if(blur === undefined) {
     blur = 0;
 }
 
-
 // Further preparations
 $(document).ready(function(){
-    console.log("Everything is set.");
-    // warn_beta();
+    console.info("Everything is set.");
 });
 
-/*function warn_beta() {
-    alert('You\'re looking at our all new JavaScript-based version of PFUDOR.tk. It\'s still a beta, so we apologize for any inconvenience in advance.');
-}*/
+// Change title
+$(function() {
+    if(pfudor == 'anim' || pfudor == 'huang') {
+        document.title = 'HAIL PFUDOR!';
+    } else if(pfudor == 'gaben') {
+        document.title = 'PRAISE LORD GABEN!';
+    } else {
+        document.title = 'PFUDOR.tk';
+    }
+});
