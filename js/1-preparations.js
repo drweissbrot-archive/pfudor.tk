@@ -57,20 +57,9 @@ if(pfudor === true) {
 }
 
 // Check volume param
-if(volume === undefined || volume >= 100) {
+if(volume === undefined || volume >= 100 || volume < 0) {
     volume = 100;
 }
-
-if(volume === 0) {
-    var mute = true;
-} else {
-    var mute = false;
-}
-
-// Parse quality param
-/* if(quality !== undefined) {
-    console.log('YouTube\'s iframe Player does not support the video quality to be set by the app developer. So, this function is not available anymore.');
-} */
 
 // Get control status
 if(ctrls == "1" || ctrls == "true") {
@@ -91,11 +80,6 @@ if(gray === undefined) {
 if(blur === undefined) {
     blur = 0;
 }
-
-// Further preparations
-$(document).ready(function(){
-    console.info("Everything is set.");
-});
 
 // Change title
 $(function() {

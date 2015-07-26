@@ -39,6 +39,7 @@ function vid_pause(){
 
 function onPlayerReady() {
     $('#loading').remove();
+    player.setVolume(volume);
 }
 
 // Apply filters
