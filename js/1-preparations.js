@@ -57,7 +57,7 @@ if(pfudor === true) {
 }
 
 // Check volume param
-if(volume === undefined || volume >= 100 || volume < 0) {
+if(volume === undefined || volume >= 100 || volume < 0 || volume === null) {
     volume = 100;
 }
 
