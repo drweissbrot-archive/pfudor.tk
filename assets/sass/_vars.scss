@@ -1,0 +1,15 @@
+// Sizes
+$width-md: 998px;
+$width-wd: 1200px;
+
+// Colors
+// fuchsia and black taken from clrs.cc / https://github.com/mrmrs/colors -- MIT license
+$fuchsia:   #f012be;
+$black:     #111;
+
+$primary:   $fuchsia;
+$accent:    #ff69b4;
+
+// etc
+$container-shadow: 0 0 2em rgba(black, 0.5);
+$text-shadow: 2px 2px 1em rgba(black, 0.5);

@@ -1,0 +1,29 @@
+.ref,
+.social,
+.credits {
+    @include transition;
+}
+
+.idle-logo {
+    @include transition;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    opacity: 0;
+    pointer-events: none;
+}
+
+body.idle {
+    cursor: none;
+
+    .ref,
+    .social,
+    .credits {
+        opacity: 0;
+    }
+
+    .idle-logo {
+        opacity: 1;
+    }
+}

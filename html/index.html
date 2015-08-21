@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PFUDOR.tk</title>
+    <link rel="stylesheet" href="/assets/css/main.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter" />
+</head>
+<body>
+    <!-- Essential stuff -->
+    <div id="player"></div>
+    <div class="overlay"></div>
+
+    <!-- Loading -->
+    <div class="loading">
+        <h2>Loading...</h2>
+        <p>
+            If you're on a mobile device, you'll need to tap on here once.
+        </p>
+    </div>
+
+    <!-- Overlays etc. -->
+    <div class="top-overlays">
+        <div class="credits"></div>
+        <div class="ref">
+            <a href="#" data-modal="credits">Credits</a>
+            <a href="#" data-modal="abuse">Report abuse</a>
+            <a href="#" data-modal="generator">Generator</a>
+            <a href="https://github.com/drweissbrot/pfudor.tk" target="_blank">
+                <i class="fa fa-github"></i>
+                <span class="gh-title">GitHub</span>
+            </a>
+        </div>
+    </div>
+    <div class="social">
+        <div class="promo">
+            <h2>The Best Song Ever</h2>
+            <p>
+                For real, this time.
+                <a href="#v=2i3ufDOOjIc">Watch it now.</a>
+                <span style="font-size:75%;color:rgba(255,255,255,0.75);text-shadow:none">It's still a joke.</span>
+            </p>
+        </div>
+
+        <span>Share this video!</span>
+        <a href="#" id="tw">
+            <i class="fa fa-twitter"></i>
+            <span>Twitter</span>
+        </a>
+        <a href="#" id="fb">
+            <i class="fa fa-facebook"></i>
+            <span>Facebook</span>
+        </a>
+        <a href="#" id="gp">
+            <i class="fa fa-google-plus"></i>
+            <span>Google+</span>
+        </a>
+        <a href="#" id="wa">
+            <i class="fa fa-whatsapp"></i>
+            <span>WhatsApp</span>
+        </a>
+        |
+        <a href="#" id="fs-tgl">
+            <i class="fa fa-expand"></i>
+            <span>Fullscreen</span>
+        </a>
+    </div>
+
+    <div class="idle-logo">
+        <h1>PFUDOR.tk</h1>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal m-credits">
+        <div class="inner">
+            <h2>
+                Credits
+                <a href="#" class="closemodal">Close</a>
+            </h2>
+
+            <div class="container">
+                <div class="half">
+                    <h3>PFUDOR.tk was created by</h3>
+                    <p>
+                        <strong>Dr. Weißbrot</strong> &minus; Developer and stuff<br />
+                        <a href="https://github.com/drweissbrot">GitHub</a> / <a href="https://drweissbrot.net">Web Site</a> / <a href="mailto:drweissbrot@outlook.com">Email</a> / <a href="skype:bigbuhmann?chat">Skype</a>
+                    </p>
+                    <p>
+                        <strong>Biberbuilder</strong> &minus; That other guy<br />
+                        <a href="skype:biberbuildergmbh?chat">Skype</a>
+                    </p>
+                </div>
+                <div class="half">
+                    <h3>Special Thanks</h3>
+                    <p>
+                        <strong><a href="https://youtube.com/songstowearpantsto">Andrew Huang</a></strong> &minus; The creator of PFUDOR<br />
+                        <strong><a href="https://youtube.com/fluffymixer">FluffyMixer</a></strong> &minus; The creator of the animated video<br />
+                        <strong>Vaalyn, Charrez &amp; <a href="http://bronyradiogermany.com">Brony Radio Germany</a>'s community</strong> &minus; Their awesome support
+                    </p>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="half">
+                    <h3>Promotions</h3>
+                    <p>
+                        Promotions on PFUDOR.tk are based on our trust in what is promoted. We'll never endorse anything we don't support 100 percent.
+                    </p>
+                    <p>
+                        We may appeal you to donate for charities. If so, please note that we do not care about which organization you support. Feel free to donate to a charity of your choice. Our recommendation is nothing more than a recommendation. &minus; However, please help as good as you can. Thank you.
+                    </p>
+                    <p>
+                        Also, please note that we're not affiliated with any charity we promote.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal m-abuse">
+        <div class="inner">
+            <h2>
+                Report abuse
+                <a href="#" class="closemodal">Close</a>
+            </h2>
+
+            <p>
+                The biggest part of PFUDOR.tk wasn't made by its creators. We're using videos from <a href="https://youtube.com/songstowearpantsto">Andrew Huang</a>, <a href="https://youtube.com/fluffymixer">FluffyMixer</a>, and - hypthetically - everyone who uploads videos to YouTube.
+            </p>
+            <p>
+                If you are a content creator, you can message us, so we can help you on preventing your video from being shown on PFUDOR.tk. Please note that we cannot take videos down from other people's copies of PFUDOR.tk's source code, nor will respond or even care about requests to take down videos from anyone but the original artist.
+            </p>
+            <p>
+                You can contact us via <a href="skype:bigbuhmann?chat">Skype (bigbuhmann)</a> or <a href="mailto:drweissbrot@outlook.com">Email (drweissbrot@outlook.com)</a>.
+            </p>
+        </div>
+    </div>
+
+    <div class="modal m-generator">
+        <div class="inner">
+            <h2>
+                Generator
+                <a href="#" class="closemodal">Close</a>
+            </h2>
+
+            <form class="container">
+                <div class="half">
+                    <label>
+                        Which video?
+                    </label>
+                    <label>
+                        <input type="radio" name="vid" id="v-anim" checked="checked" /> <span>PFUDOR (Animation)</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="vid" id="v-huang" /> <span>PFUDOR (Huang)</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="vid" id="v-gaben" /> <span>Gaben</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="vid" id="v-yt" /> <span>YouTube</span>
+                    </label>
+
+                    <label id="vidid-label">
+                        Video id
+                        <input type="text" id="vidid" />
+                    </label>
+
+                    <label>
+                        Volume
+                        <input type="number" id="vol" min="0" max="100" value="100" />
+                        <input type="range" id="vol-slide" value="100" />
+                    </label>
+
+                    <label>
+                        Quality
+                    </label>
+                    <label>
+                        <input type="radio" name="quality" id="q-240" /> <span>240p</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="quality" id="q-360" /> <span>360p</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="quality" id="q-480" /> <span>480p</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="quality" id="q-720" checked="checked" /> <span>720p</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="quality" id="q-1080" /> <span>1080p</span>
+                    </label>
+                </div>
+
+                <div class="half">
+                    <label>
+                        Start at [seconds]
+                        <input type="number" id="startat" min="0" value="0" />
+                    </label>
+
+                    <label>
+                        End at [seconds] (0 = until end)
+                        <input type="number" id="endat" min="0" value="0" />
+                    </label>
+
+                    <label>
+                        <input type="checkbox" id="ctrls" /> <span>Enable controls</span>
+                    </label>
+
+                    <label>
+                        <strong>Filters</strong>
+                    </label>
+                    <label>
+                        Sepia (0% - 100%)
+                        <input type="number" id="sepia" min="0" max="100" value="0" />
+                    </label>
+                    <label>
+                        Grayscale (0% - 100%)
+                        <input type="number" id="gray" min="0" max="100" value="0" />
+                    </label>
+                    <label>
+                        Blur (px)
+                        <input type="number" id="blur" min="0" max="100" value="0" />
+                    </label>
+
+                    <label>
+                        <strong>Your Link</strong>
+                        <input type="text" id="genlink" value="https://pfudor.tk/#" />
+                    </label>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="/assets/js/main.min.js" asnyc></script>
+</body>
+</html>

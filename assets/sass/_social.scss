@@ -1,0 +1,26 @@
+.social {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    a,
+    span {
+        vertical-align: middle;
+    }
+
+    span {
+        @media (max-width: $width-md) {
+            display: none;
+        }
+    }
+}
+
+.promo {
+    @media (max-width: $width-md) {
+        display: none;
+    }
+
+    p {
+        margin: 0;
+    }
+}

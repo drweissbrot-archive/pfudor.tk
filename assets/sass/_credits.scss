@@ -1,0 +1,15 @@
+.credits {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    a {
+        padding: 0.5em 1.5em;
+
+        @media (min-width: 690px) {
+            &:first-child {
+                padding-top: 1.5em;
+            }
+        }
+    }
+}

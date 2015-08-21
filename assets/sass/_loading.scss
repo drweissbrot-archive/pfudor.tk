@@ -1,0 +1,38 @@
+.loading {
+    @include transition;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    pointer-events: none;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    animation: {
+        name: loading;
+        duration: 4s;
+        iteration-count: infinite;
+    }
+
+    &.hide {
+        opacity: 0;
+    }
+}
+
+@keyframes loading {
+    0%,
+    100% {
+        color: white;
+    }
+    50% {
+        color: $primary;
+    }
+}

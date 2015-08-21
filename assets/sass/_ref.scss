@@ -1,0 +1,11 @@
+.ref {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+@media (max-width: 449px) {
+    .gh-title {
+        display: none;
+    }
+}

@@ -1,0 +1,15 @@
+@mixin transition($target: all, $duration: 0.25s, $animation: ease, $delay: 0s) {
+    transition: $target $duration $animation $delay;
+}
+
+@mixin medium {
+    @media (min-width: $width-md) {
+        @content;
+    }
+}
+
+@mixin wide {
+    @media (min-width: $width-wd) {
+        @content;
+    }
+}

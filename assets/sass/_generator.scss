@@ -1,0 +1,44 @@
+label {
+    display: block;
+    margin-bottom: 1em;
+}
+
+input {
+    width: 100%;
+    margin-bottom: 1em;
+    color: black;
+
+    &[type='radio'],
+    &[type='checkbox'] {
+        display: none;
+
+        & + span {
+            cursor: pointer;
+
+            &::before {
+                @extend .fa;
+                content: '\f10c ';
+                padding-right: 0.75em;
+            }
+        }
+
+        &:checked + span {
+            &::before {
+                content: '\f058 ';
+            }
+        }
+    }
+
+    &:not([type='range']) {
+        padding: 0.5em 2em;
+    }
+}
+
+#vidid-label {
+    display: none;
+}
+
+#genid {
+    display: block;
+    width: 100%;
+}

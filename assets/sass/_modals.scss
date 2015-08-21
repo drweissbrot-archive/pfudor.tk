@@ -1,0 +1,61 @@
+body.has-modal {
+    .ref,
+    .social,
+    .credits,
+    .idle-logo {
+        opacity: 0 !important;
+    }
+}
+
+.modal {
+    @include transition;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+
+    background: rgba(black, 0.5);
+
+    width: 100vw;
+    height: 100vh;
+
+    pointer-events: none;
+    overflow: auto;
+
+    &.active {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .inner {
+        width: calc(100% - 4em);
+        max-width: $width-md;
+        margin: 2em auto;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .half {
+            @include medium {
+                max-width: calc((100% - 4em) / 2);
+            }
+        }
+    }
+
+    .closemodal {
+        font-size: 1.5rem;
+        padding-left: 0.5em;
+    }
+
+    a {
+        display: inline;
+        padding: 0;
+    }
+
+    h2 {
+        margin-bottom: 1em;
+    }
+}
